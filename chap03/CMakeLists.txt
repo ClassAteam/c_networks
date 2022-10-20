@@ -9,3 +9,4 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_BINDIR})
 
 add_executable(tcp_client tcp_client.c)
 add_executable(tcp_serve_toupper tcp_serve_toupper.c)
+add_executable(tcp_serve_chat tcp_serve_chat.c)
