@@ -9,3 +9,5 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_BINDIR})
 
 add_executable(udp_recvfrom udp_recvfrom.c)
 add_executable(udp_client udp_client.c)
+add_executable(udp_sendto udp_sendto.c)
+add_executable(udp_serve_toupper udp_serve_toupper.c)
