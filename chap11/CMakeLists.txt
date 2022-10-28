@@ -9,8 +9,13 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_LIBDIR})
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_LIBDIR})
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_BINDIR})
 
-add_executable(ssh_version ssh_version.c)
-add_executable(ssh_connect ssh_connect.c)
+list(APPEND execs
+  ssh_version
+  ssh_connect
+  ssh_auth
+  )
 
-target_link_libraries(ssh_version ssh)
-target_link_libraries(ssh_connect ssh)
+foreach(_exec IN LISTS execs)
+  add_executable(${_exec} ${_exec}.c)
+  target_link_libraries(${_exec} ssh)
+endforeach()
