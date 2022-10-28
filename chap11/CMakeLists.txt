@@ -13,6 +13,7 @@ list(APPEND execs
   ssh_version
   ssh_connect
   ssh_auth
+  ssh_command
   )
 
 foreach(_exec IN LISTS execs)
